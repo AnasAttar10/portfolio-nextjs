@@ -561,6 +561,8 @@
 
   html, :host {
     -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
     tab-size: 4;
     line-height: 1.5;
     font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
@@ -675,11 +677,25 @@
     margin-inline-end: 4px;
   }
 
+  ::-moz-placeholder {
+    opacity: 1;
+  }
+
   ::placeholder {
     opacity: 1;
   }
 
   @supports (not ((-webkit-appearance: -apple-pay-button))) or (contain-intrinsic-size: 1px) {
+    ::-moz-placeholder {
+      color: currentColor;
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      ::-moz-placeholder {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+
     ::placeholder {
       color: currentColor;
     }
@@ -721,6 +737,8 @@
   }
 
   button, input:where([type="button"], [type="reset"], [type="submit"]), ::file-selector-button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
     appearance: button;
   }
 
@@ -1484,14 +1502,19 @@
   }
 
   .appearance-auto {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
     appearance: auto;
   }
 
   .appearance-none {
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
   }
 
   .columns-auto {
+    -moz-columns: auto;
     columns: auto;
   }
 
@@ -2248,6 +2271,7 @@
   }
 
   .mask-none {
+    -webkit-mask-image: none;
     mask-image: none;
   }
 
@@ -2368,6 +2392,7 @@
   }
 
   .bg-clip-text {
+    -webkit-background-clip: text;
     background-clip: text;
   }
 
@@ -2460,18 +2485,22 @@
   }
 
   .mask-add {
+    -webkit-mask-composite: source-over;
     mask-composite: add;
   }
 
   .mask-exclude {
+    -webkit-mask-composite: xor;
     mask-composite: exclude;
   }
 
   .mask-intersect {
+    -webkit-mask-composite: source-in, xor;
     mask-composite: intersect;
   }
 
   .mask-subtract {
+    -webkit-mask-composite: source-out;
     mask-composite: subtract;
   }
 
@@ -2496,126 +2525,157 @@
   }
 
   .mask-auto {
+    -webkit-mask-size: auto;
     mask-size: auto;
   }
 
   .mask-contain {
+    -webkit-mask-size: contain;
     mask-size: contain;
   }
 
   .mask-cover {
+    -webkit-mask-size: cover;
     mask-size: cover;
   }
 
   .mask-clip-border {
+    -webkit-mask-clip: border-box;
     mask-clip: border-box;
   }
 
   .mask-clip-content {
+    -webkit-mask-clip: content-box;
     mask-clip: content-box;
   }
 
   .mask-clip-fill {
+    -webkit-mask-clip: fill-box;
     mask-clip: fill-box;
   }
 
   .mask-clip-padding {
+    -webkit-mask-clip: padding-box;
     mask-clip: padding-box;
   }
 
   .mask-clip-stroke {
+    -webkit-mask-clip: stroke-box;
     mask-clip: stroke-box;
   }
 
   .mask-clip-view {
+    -webkit-mask-clip: view-box;
     mask-clip: view-box;
   }
 
   .mask-no-clip {
+    -webkit-mask-clip: no-clip;
     mask-clip: no-clip;
   }
 
   .mask-bottom {
+    -webkit-mask-position: bottom;
     mask-position: bottom;
   }
 
   .mask-bottom-left {
+    -webkit-mask-position: 0 100%;
     mask-position: 0 100%;
   }
 
   .mask-bottom-right {
+    -webkit-mask-position: 100% 100%;
     mask-position: 100% 100%;
   }
 
   .mask-center {
+    -webkit-mask-position: center;
     mask-position: center;
   }
 
   .mask-left {
+    -webkit-mask-position: 0;
     mask-position: 0;
   }
 
   .mask-right {
+    -webkit-mask-position: 100%;
     mask-position: 100%;
   }
 
   .mask-top {
+    -webkit-mask-position: top;
     mask-position: top;
   }
 
   .mask-top-left {
+    -webkit-mask-position: 0 0;
     mask-position: 0 0;
   }
 
   .mask-top-right {
+    -webkit-mask-position: 100% 0;
     mask-position: 100% 0;
   }
 
   .mask-no-repeat {
+    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
   }
 
   .mask-repeat {
+    -webkit-mask-repeat: repeat;
     mask-repeat: repeat;
   }
 
   .mask-repeat-round {
+    -webkit-mask-repeat: round;
     mask-repeat: round;
   }
 
   .mask-repeat-space {
+    -webkit-mask-repeat: space;
     mask-repeat: space;
   }
 
   .mask-repeat-x {
+    -webkit-mask-repeat: repeat-x;
     mask-repeat: repeat-x;
   }
 
   .mask-repeat-y {
+    -webkit-mask-repeat: repeat-y;
     mask-repeat: repeat-y;
   }
 
   .mask-origin-border {
+    -webkit-mask-origin: border-box;
     mask-origin: border-box;
   }
 
   .mask-origin-content {
+    -webkit-mask-origin: content-box;
     mask-origin: content-box;
   }
 
   .mask-origin-fill {
+    -webkit-mask-origin: fill-box;
     mask-origin: fill-box;
   }
 
   .mask-origin-padding {
+    -webkit-mask-origin: padding-box;
     mask-origin: padding-box;
   }
 
   .mask-origin-stroke {
+    -webkit-mask-origin: stroke-box;
     mask-origin: stroke-box;
   }
 
   .mask-origin-view {
+    -webkit-mask-origin: view-box;
     mask-origin: view-box;
   }
 
@@ -2628,74 +2688,92 @@
   }
 
   .object-contain {
+    -o-object-fit: contain;
     object-fit: contain;
   }
 
   .object-cover {
+    -o-object-fit: cover;
     object-fit: cover;
   }
 
   .object-fill {
+    -o-object-fit: fill;
     object-fit: fill;
   }
 
   .object-none {
+    -o-object-fit: none;
     object-fit: none;
   }
 
   .object-scale-down {
+    -o-object-fit: scale-down;
     object-fit: scale-down;
   }
 
   .object-bottom {
+    -o-object-position: bottom;
     object-position: bottom;
   }
 
   .object-bottom-left {
+    -o-object-position: left bottom;
     object-position: left bottom;
   }
 
   .object-bottom-right {
+    -o-object-position: right bottom;
     object-position: right bottom;
   }
 
   .object-center {
+    -o-object-position: center;
     object-position: center;
   }
 
   .object-left {
+    -o-object-position: left;
     object-position: left;
   }
 
   .object-left-bottom {
+    -o-object-position: left bottom;
     object-position: left bottom;
   }
 
   .object-left-top {
+    -o-object-position: left top;
     object-position: left top;
   }
 
   .object-right {
+    -o-object-position: right;
     object-position: right;
   }
 
   .object-right-bottom {
+    -o-object-position: right bottom;
     object-position: right bottom;
   }
 
   .object-right-top {
+    -o-object-position: right top;
     object-position: right top;
   }
 
   .object-top {
+    -o-object-position: top;
     object-position: top;
   }
 
   .object-top-left {
+    -o-object-position: left top;
     object-position: left top;
   }
 
   .object-top-right {
+    -o-object-position: right top;
     object-position: right top;
   }
 
@@ -3318,7 +3396,7 @@
   }
 
   .transition {
-    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
