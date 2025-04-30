@@ -1,0 +1,42 @@
+{
+  "name": "Anas Attar",
+  "title": "Full Stack Developer",
+  "hero": "I'm a Full Stack Developer specializing in React, Next.js, Node.js, and modern APIs, passionate about crafting scalable, responsive, and user-friendly web applications.",
+  "about": "I'm a passionate Full Stack Developer from Palestine with a strong focus on frontend development. Since 2020, I’ve been building web applications using modern technologies . I enjoy turning ideas into real, functional, and user-friendly experiences.I’ve worked on diverse projects, including e-commerce platforms, local business directories, and social media-style applications. I believe in clean code, responsive design, and continuously learning new tools to deliver better results.Whether working independently or with a team, I’m always committed to building scalable and impactful web solutions tailored to user needs. ",
+  "skills": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "React",
+    "Redux",
+    "Next.js",
+    "Node",
+    "Express.js",
+    "MongoDB",
+    "MySql",
+    "Problem Solving",
+    "Git"
+  ],
+  "projects": [
+    {
+      "title": "E-Commerce Website",
+      "description": "An advanced e-commerce platform designed for a smooth online shopping experience. Built with React, Redux, Express, Stripe, and MongoDB, it offers users a seamless and secure shopping experience while providing merchants with the tools to manage products, orders, and payments efficiently.",
+      "image": "/ecommerce2.jpeg",
+      "link": "https://e-commerce-frontend-two-chi.vercel.app/",
+      "github": "https://github.com/AnasAttar10/eCommerce_Frontend"
+    },
+    {
+      "title": "POS Website",
+      "description": "A fully-featured POS app built with React, Redux, Express, Stripe, and MongoDB. This app allows merchants to efficiently manage their products, orders, and payments, providing a seamless and secure online store experience.",
+      "image": "/ecommerce3.jpg",
+      "link": "https://pos-frontend-eta.vercel.app/login",
+      "github": "https://github.com/AnasAttar10/POS-Frontend"
+    }
+  ],
+
+  "contact": {
+    "email": "anasattar2010@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/anas-attar-495433201/",
+    "github": "https://github.com/AnasAttar10"
+  }
+}
