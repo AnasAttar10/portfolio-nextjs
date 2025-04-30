@@ -18,8 +18,8 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full bg-background p-4 text-white shadow-md z-50 transition-all duration-300 ease-in-out">
       <div className="flex justify-between items-center max-w-6xl mx-auto">
         <div
-          className="text-2xl font-bold text-white"
-          style={{ fontFamily: "'Great Vibes', cursive" }}
+          className="text-2xl font-bold text-white "
+          style={{ fontFamily: "var(--font-great-vibes)" }}
         >
           A-A
         </div>

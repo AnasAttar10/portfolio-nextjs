@@ -3721,6 +3721,15 @@
   --foreground: #fff;
 }
 
+@font-face {
+  font-family: Great Vibes;
+  src: local(Great Vibes), url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap") format("truetype");
+}
+
+.great-vibes-font {
+  font-family: Great Vibes, cursive;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
